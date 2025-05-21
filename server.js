@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 4000;
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -54,6 +56,15 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Unable to fulfill this request',
   });
 });
-app.listen(4000, () => {
-  console.log('Server is up on port 4000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
+
+//SSH KEY FOR GITHUB:
+// Your identification has been saved in /c/Users/Uzor/.ssh/id_rsa
+// Your public key has been saved in /c/Users/Uzor/.ssh/id_rsa.pub
+// The key fingerprint is:
+// SHA256:k6It22wcXhtHn+aBc/EESYEmmwmxE66RwwQk/SyOQIo uzochukwuaronu@gmail.com
+// The key's randomart image is:
+
+//Agent pid 2793
